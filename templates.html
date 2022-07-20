@@ -82,12 +82,18 @@
         <div id="side_bar">
             <p>VIEW BY</p>
             <div>
-                <div>
-                    <h3>Recommended for you</h3>
+                <div class="side_elements" id="side_1El">
+                    <p class="active_side">Recommended for you</p>
                 </div>
-                <p>All Templates</p>
-                <p>New</p>
-                <p>Popular</p>
+                <div id="side_2El">
+                    <p class="inactive_side">All Templates</p>
+                </div>
+                <div id="side_3El">
+                    <p class="inactive_side">New</p>
+                </div>
+                <div id="side_4El">
+                    <p class="inactive_side">Popular</p>
+                </div>
             </div>
             <div>
                 <h3>TYPE OF TEMPLATE</h3>
@@ -117,7 +123,7 @@
             <div class="disFlex">
                 <div class="temp-sec-1-1">
                     <p>CHOOSE A TEMPLATE</p>
-                    <h1>Recommended for you</h1>
+                    <h1 id="sec_heading">Recommended for you</h1>
                     <div id="wave_line">
                         <span class="wave_line">
                             <img src="https://d2of6bhnpl91ni.cloudfront.net/bundles/react/images/wavy.svg" alt="">
@@ -128,11 +134,21 @@
                     START FROM SCRATCH
                 </div>
             </div>
+            <div class="temp-sec-2 disFlex just-between align-center">
+                <div>
+                    <p>We suggest starting with these templates.</p>
+                </div>
+                <div>
+                    <form>
+                        <input type="search" placeholder="Search all templates" id="query">
+                    </form>
+                </div>
+            </div>
+            <div id="templates_results"></div>
         </div>
     </section>
     <!--First Section End-->
 </body>
 
 </html>
-
-<script src="templates.js"></script>
+<script src="templates.js" type="module"></script>
