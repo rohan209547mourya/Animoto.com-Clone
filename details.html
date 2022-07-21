@@ -8,14 +8,150 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./templates.css">
     <title>Template Details - Animoto</title>
 </head>
+<style>
+    #navigation {
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+        color: #23408c;
+    }
+
+    .main_Container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        height: auto;
+        margin-top: 10px;
+        padding: 30px;
+    }
+
+    #sec-1_main {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+    }
+
+    #main_heading {
+        font-size: 3rem;
+        font-family: 'Playfair Display', serif;
+        color: #181c47;
+    }
+
+
+    #main_heading+span>img {
+        width: 100px;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    #content {
+        width: 60%;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px 0 10px 0;
+    }
+
+    #bullet_point {
+        margin-left: 20px;
+    }
+
+    #bullet_point>li {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+    }
+
+    #share_to,
+    #grate_for {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
+    }
+
+    #last-sec {
+        display: flex;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 20px;
+    }
+
+    #last-sec>button {
+        padding: 10px;
+        width: 40%;
+        border-radius: 16px;
+        border: none;
+        font-weight: 600;
+        background-color: #23408c;
+        color: white;
+        transition: all .2s ease;
+    }
+
+    #last-sec>button:hover {
+        cursor: pointer;
+        background-color: #0f2049;
+    }
+
+    #last-sec>p {
+        margin-left: 100px;
+        color: #23408c;
+        font-weight: 600;
+        cursor: pointer;
+    }
+</style>
 
 <body>
     <div id="navabr">
 
     </div>
+
+    <section id="nav_sec-1">
+        <div id="navigation">Templates / Recommended for you</div>
+        <div class="main_Container">
+            <div id="sec-1_main">
+                <video autoplay loop controls src="" id="video_main"></video>
+            </div>
+            <div id="sec-2_main">
+                <div>
+                    <h1 id="main_heading"></h1>
+                    <span>
+                        <img src="https://d2of6bhnpl91ni.cloudfront.net/bundles/react/images/wavy.svg" alt="">
+                    </span>
+                </div>
+                <div>
+                    <p id="content"></p>
+                </div>
+                <div>
+                    <ul id="bullet_point"></ul>
+                </div>
+                <div>
+                    <h3>share to</h3>
+                    <p id="share_to"></p>
+                </div>
+                <div>
+                    <h3>Great for</h3>
+                    <p id="grate_for"></p>
+                </div>
+                <div id="last-sec">
+                    <button>GET STARTED</button>
+                    <p>VIEW ALL TEMPLATES</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 </body>
@@ -23,8 +159,74 @@
 </html>
 
 <script type="module">
-    import { navbar, navbarResponse } from "./productions.js";
+    import { navbar, navbarResponse, navbarResponse1 } from "./components/production.js";
+    let tempData = JSON.parse(localStorage.getItem("templateDetails"));
+
+
     document.getElementById("navabr").innerHTML = navbar();
-    navbarResponse()
+    navbarResponse();
+    navbarResponse1();
+
+
+    const loadJSON = (path, success, error) => {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    success(JSON.parse(xhr.responseText));
+                }
+                else {
+                    error(xhr);
+                }
+            }
+        };
+        xhr.open('GET', path, true);
+        xhr.send();
+    }
+
+
+    const myData = (Data) => {
+        let container = document.getElementById("bullet_point");
+
+        container.innerHTML = "";
+        Data.bullet_points.forEach(el => {
+            let list = document.createElement("li");
+
+            list.innerText = el
+
+            container.append(list);
+        })
+    }
+
+    loadJSON(`${tempData.details_url}`, myData, 'jsonp');
+
+    const getEle = (type) => {
+        return document.getElementById(type);
+    }
+
+    getEle("video_main").src = tempData.hover_preview_url;
+    getEle("main_heading").innerText = tempData.title;
+    getEle("content").innerText = tempData.description.trim();
+
+    for (let i of tempData.platforms) {
+        if (getEle("share_to").innerText == "") {
+
+            getEle("share_to").innerText = i;
+        } else {
+
+            getEle("share_to").innerText += ", " + i;
+        }
+    }
+
+    for (let i of tempData.industries) {
+        if (getEle("grate_for").innerText == "") {
+
+            getEle("grate_for").innerText = i;
+        } else {
+
+            getEle("grate_for").innerText += ", " + i;
+        }
+    }
+
 
 </script>
