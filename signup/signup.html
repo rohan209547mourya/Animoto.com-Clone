@@ -47,12 +47,14 @@
       }
       #button {
         display: flex;
+        cursor: pointer;
       }
       .create {
         width: 300px;
         height: 50px;
         font-style:italic;
         background-color: rgb(122, 166, 166);
+        cursor: pointer;
       }
       .or{
         color:rgba(201, 186, 201, 0.973);
@@ -61,6 +63,7 @@
         color: rgb(189, 210, 210);
         margin-top: 10px;
       }
+      
 
     </style>
     <!-- <link rel="stylesheet" href="./index.css"> -->
@@ -85,8 +88,8 @@
             <h3>SIGN UP WITH FACEBOOK</h3>
           </div>
         </button>
-        <h6>By signing up agree to our terms of service and privacy policy.</h6>
-        <h5>Already have an account ? Log in</h5>
+        <h6>By signing up agree to our <a href="https://animoto.com/legal/terms">terms of service</a> and <span class="spanterm">privacy policy.</span></h6>
+        <h5>Already have an account ? <a href="../login/login.html">Log in</a></h5>
       </form>
     </div>
   </body>

@@ -1,133 +1,190 @@
+<!-- https://animoto.com/static/TealDots-212c4a91665ce0cc624cdf92514a34d6.svg -->
+<!--https://animoto.com/static/YellowCorner-d367eaf0eeff2a90f1d4d374e3b1c3e8.svg-->
+<!--https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg-->
+<!-- https://d2of6bhnpl91ni.cloudfront.net/cms/03_New%20Aspirational%20V2_YT_Stream-b0e722c3fc.mp4
+https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg -->
+
+
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
     <style>
-        #navbar{
-           margin-top:auto;
-            width: 100%;
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-h4{
-    color:#234a95;
-    text-decoration: solid;
-}
-#logo >img{
-   cursor: pointer;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-#header{
-    display: flex;
-    justify-content:space-between;
-    width: 40%;
-    padding-left: 20px;
-    
-    margin-right: 250px;
+      #navbar {
+        margin-top: auto;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h4 {
+        color: #234a95;
+        text-decoration: solid;
+      }
+      #logo > img {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      #header {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        padding-left: 20px;
 
-}
-#lsp{
-    display: flex;
-    width: 300px;
-    justify-content: space-evenly;
-   
-    margin-left: 300px;
-}
-#lsp >div>a{
-    text-decoration: none;
-}
-#footer{
-    display: flex;
-    height:500px;
-    background-color: #dadada;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    
-}
-#footer >div{
+        margin-right: 250px;
+      }
+      #lsp {
+        display: flex;
+        width: 300px;
+        justify-content: space-evenly;
+         margin-left: 300px;
+      }
+      #lsp > div > a {
+        text-decoration: none;
+      }
+      .drop1{
+       border: 1px solid black;
+        display: flex;
+        width: 1000px;
+        height: 150px;
+        justify-content:space-around;
+        display: none;
+        
+      }
+      .drop1>.sec{
+        margin-top: 40px;
+      }
+      #byvideo1{
+        display: flex;
+
+      }
+      #footer {
+        display: flex;
+        height: 500px;
+        background-color: #dadada;
+        justify-content: space-evenly;
+        margin-top: 50px;
+      }
+      #footer > div {
         margin-top: 80px;
-    }
-h5{
-    color:grey;
-}
-#sm>img{
-   
-    width: 200px;
-    height:40px;
-    margin-bottom: 30px;
-  
-}
-#fb>img{
-    width: 110px;
-    height: 60px;
- 
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-#yt>img{
-    width: 80px;
-    height: 30px;
-}
-#bottom{
-    height: 100px;
-    background-color: #232323;
-    text-align: center;
-}
-#bottom>img{
-    width: 400px;
-    height: 80px;
-    margin-top: 20px;
-}
-
-
+      }
+      h5 {
+        color: grey;
+      }
+      #sm > img {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 30px;
+        cursor: pointer;
+      }
+      #fb > img {
+        width: 110px;
+        height: 60px;
+        cursor: pointer;
+        margin-left: 20px;
+        margin-bottom: 30px;
+      }
+      #yt > img {
+        width: 80px;
+        height: 30px;
+        cursor: pointer;
+      }
+      #bottom {
+        height: 100px;
+        background-color: #232323;
+        text-align: center;
+      }
+      #bottom > img {
+        width: 400px;
+        height: 80px;
+        margin-top: 20px;
+      }
+      .create{
+        cursor: pointer;
+      }
+      .drop1 h4{
+        color: gray;
+      }
+      .create:hover .drop1{
+        display: block;
+      }
+      
+     
     </style>
-   
-</head>
-<!-- //***********************Header***********************************// -->
-<body>    
-  <div id="navbar">
-    <div id="logo">
-        <img src="https://i.im.ge/2022/07/19/FF54FF.jpg" alt="logo">
-    </div>
-    <div id="header">
-        <h4>CREATE</h4>
+  </head>
+  <!-- //***********************Header***********************************// -->
+  <body>
+    <div id="navbar">
+      <div id="logo">
+        <img src="https://i.im.ge/2022/07/19/FF54FF.jpg" alt="logo" />
+      </div>
+      <div id="header">
+        <h4 class="create">CREATE</h4>
+        <!-- <div class="drop1">
+            <div id="byvideo">
+              <h3>BY VIDEO TYPE</h3>
+              <h4>Promo Video</h4>
+              <h4>Slideshow Video</h4>  
+              <h4>Social media Video</h4>
+            </div>
+             <div class="sec">
+            <h4>Tutorial Video</h4>
+            <h4>Birthday Video</h4>
+            <h4>Graduation video</h4>
+          </div>
+            <div id="byindustry">
+              <h3>BY INDUSTRY</h3>
+              <h4>Business</h4>
+              <h4>Real estate</h4>
+              <h4>Photography</h4>
+              </div>
+              <div class="sec">  
+                <h4>E-commerce</h4>
+                <h4>Education</h4>
+                <h4>Non-profit</h4>
+              </div>
+             
+        </div> -->
         <h4>TEMPLATES</h4>
         <h4>FEATURES</h4>
         <h4>PRICING</h4>
         <h4>LEARN</h4>
-    </div>
-    <div id="lsp">
+      </div>
+      <div id="lsp">
         <div>
-            <h4>LOG IN</h4>
+            <a href="./login/login.html"> <h4>LOG IN</h4>
         </div>
-            <div>
-               <a href="./signup/signup.html"> <h4>SIGN UP FREE</h4></a>
-            </div>
+        <div>
+          <a href="./signup/signup.html"> <h4>SIGN UP FREE</h4></a>
         </div>
-
-  </div>
-  <!-- //******************Footer*********************// -->
-  <div id="footer">
-    <div>
-        <h3>USES
-            <h5>Marketing video</h5>
-            <h5>Video ad</h5>
-            <h5>How-to video</h5>
-            <h5>Slideshow video</h5>
-            <h5>Social media</h5>
-            <h5>Promo video</h5>
-            <h5>Birthday video</h5>
+      </div>
+      </div>
+      <!--********************Home**************************-->
+      
+     
+     <!-- //******************Footer*********************// -->
+    <div id="footer">
+      <div>
+        <h3>
+          USES
+          <h5>Marketing video</h5>
+          <h5>Video ad</h5>
+          <h5>How-to video</h5>
+          <h5>Slideshow video</h5>
+          <h5>Social media</h5>
+          <h5>Promo video</h5>
+          <h5>Birthday video</h5>
         </h3>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>ANIMOTO FOR</h3>
         <h5>Business</h5>
         <h5>Photography</h5>
@@ -136,8 +193,8 @@ h5{
         <h5>Education</h5>
         <h5>Ecommerce</h5>
         <h5>Fitness</h5>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>FEATURES</h3>
         <h5>Photo video maker</h5>
         <h5>Music library</h5>
@@ -146,9 +203,8 @@ h5{
         <h5>Video trimming</h5>
         <h5>Stock library</h5>
         <h5>Stock library</h5>
-    
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>COMPANY</h3>
         <h5>Support</h5>
         <h5>Blog</h5>
@@ -157,26 +213,23 @@ h5{
         <h5>Affiliates</h5>
         <h5>Privacy policy</h5>
         <h5>Terms of use</h5>
-    </div>
-    <div>
+      </div>
+      <div>
         <h3>CONNECT</h3>
-        <div  id="sm">
-            <img src="https://i.im.ge/2022/07/19/FFyWjr.jpg" alt="social">
-             </div>
+        <div id="sm">
+          <img src="https://i.im.ge/2022/07/19/FFyWjr.jpg" alt="social" />
+        </div>
         <div id="fb">
-            <img src="https://i.im.ge/2022/07/19/FFy4FJ.jpg" alt="">
+          <img src="https://i.im.ge/2022/07/19/FFy4FJ.jpg" alt="" />
         </div>
         <div id="yt">
-            <img src="https://i.im.ge/2022/07/19/FFAMTz.jpg" alt="">
+          <img src="https://i.im.ge/2022/07/19/FFAMTz.jpg" alt="" />
         </div>
+      </div>
     </div>
-  </div>
-  <div id="bottom">
-    <img src="https://i.im.ge/2022/07/19/FF3tMS.jpg" alt="">
-  </div>
-
-
-   
-</body>
+    <div id="bottom">
+      <img src="https://i.im.ge/2022/07/19/FF3tMS.jpg" alt="" />
+    </div>
+  </body>
 </html>
 <script src="./index.js" type="module"></script>
