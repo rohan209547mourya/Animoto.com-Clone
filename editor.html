@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/510/fabric.min.js"></script>
+    <link rel="stylesheet" href="templates.css">
+    <title>Animoto Editor - Animoto</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+    *,
+    ::before,
+    ::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        position: relative;
+        background-color: rgb(247, 249, 255);
+        max-width: 100vw;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+
+
+    .nav_Elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid rgb(207, 207, 207);
+        width: 9%;
+        background-color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .nav>.nav_Elements:nth-child(1) {
+        padding: 10px;
+        width: 19%;
+    }
+
+    .nav_l {
+        height: 20px;
+        width: 1px;
+        background-color: black;
+        margin: 10px;
+    }
+
+    .nav>.nav_Elements:nth-child(2) {
+        padding: 5px;
+        width: 30%;
+    }
+
+    .nav>.nav_Elements:nth-child(2)>div {
+        display: flex;
+        width: 30%;
+        height: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .nav>.nav_Elements:nth-child(2)>div:hover {
+        background-color: rgb(241, 241, 241);
+    }
+
+    .nav_Elements:nth-child(6)>p {
+        color: gray;
+    }
+
+    #logo {
+        width: 30px;
+    }
+
+    #sec-2 {
+        display: grid;
+        grid-template-columns: 79% 20%;
+    }
+
+
+    #sidebar {
+        position: relative;
+        height: 88vh;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 2px 6px 0 rgb(0 0 0 / 18%), 0 0 2px 0 rgb(0 0 0 / 18%);
+        transition: all .1s ease-in-out;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin-left: 5px;
+    }
+
+    .side-ul {
+        padding: 10px;
+    }
+
+    li {
+        padding: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        border-bottom: 2px solid rgb(195, 194, 194);
+    }
+
+    li:hover {
+        cursor: pointer;
+        border-bottom: 2px solid rgb(88, 167, 210);
+    }
+
+    .side-heading {
+        margin: 10px 0 0 20px;
+        font-weight: 500;
+        font-size: 1.4rem;
+    }
+
+    .side-active {
+        color: rgb(82, 169, 216);
+        border-bottom: 2px solid rgb(88, 167, 210);
+    }
+
+    .files {
+        position: relative;
+        padding: 10px;
+        background-color: white;
+    }
+
+    #fileUpload {
+        border: 1px dashed black;
+        background-color: white;
+        color: white;
+        width: 100%;
+        height: 8rem;
+    }
+
+    #fileUpload:hover {
+        cursor: pointer;
+        background-color: rgb(178, 213, 227);
+        color: rgb(178, 213, 227);
+    }
+
+    .side-files {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+    }
+
+    .fa-cloud-arrow-up {
+        font-size: 2rem;
+        top: 43%;
+        left: 15%;
+    }
+
+    .dis_none {
+        display: none;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 40%;
+        left: -15px;
+        background-color: white;
+        color: black;
+        width: 30px;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        cursor: pointer;
+        border-left: 1px solid rgb(191, 189, 189);
+    }
+
+    #canvas {
+        width: 100%;
+        margin: auto;
+        margin-left: 10%;
+    }
+
+    canvas {
+        border: 1px solid gray;
+    }
+
+    #sec-2-1 {
+        position: relative;
+    }
+
+    #seekP {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #seek {
+        width: 350px;
+        height: 10px;
+        background-color: rgb(209, 209, 209);
+    }
+
+    #moveSeek {
+        position: absolute;
+        height: 10px;
+        top: 0;
+        background-color: rgb(197, 41, 23);
+        transition: all 2.2s ease;
+    }
+
+    #play,
+    #pause {
+        margin: 0px 40px 0px 40px;
+        font-size: 2rem;
+        color: rgb(23, 96, 185);
+        cursor: pointer;
+    }
+
+    #img_preview {
+        margin: 10px 0 0 10px;
+        width: 200px;
+    }
+
+    #img_preview>img {
+        width: 100%;
+
+    }
+
+    a {
+        color: rgb(31, 186, 233);
+        text-decoration: none;
+    }
+
+    #option {
+        display: none;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #option>button,
+    #option>input,
+    #option>select {
+        height: 40px;
+        width: 100px;
+        margin-right: 20px;
+        background-color: white;
+        border: none;
+        box-shadow: -2px 5px 2px gray;
+        cursor: pointer;
+    }
+
+    #worning {
+        font-family: 'Poppins', sans-serif;
+        display: none;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        margin-top: 10vh;
+    }
+
+    #worning>div {
+        padding: 10px;
+    }
+
+    #worning>div:nth-child(1) {
+        font-size: 10rem;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    @media all and (min-width: 320px) and (max-width: 1024px) {
+        #navbar {
+            display: block;
+        }
+
+        .nav,
+        #sec-2 {
+            display: none;
+        }
+
+        #worning {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <div id="navbar"></div>
+    <div class="nav">
+        <div class="nav_Elements">
+            <img id="logo" src="https://techcrunch.com/wp-content/uploads/2013/06/animoto.png" />
+            <div class="nav_l"></div>
+            <p>Animoto Video</p>
+        </div>
+        <div class="nav_Elements">
+            <div>
+                <i class="fa-solid fa-pencil"></i>
+                <p onclick="openDesign()">Design</p>
+            </div>
+            <span class="nav_l"></span>
+            <div>
+                <i class="fa-solid fa-music"></i>
+                <p>Audio</p>
+            </div>
+            <span class="nav_l"></span>
+            <div>
+                <i class="fa-solid fa-border-all"></i>
+                <p>Ratio</p>
+            </div>
+        </div>
+        <div class="nav_Elements">
+            <span class="circle">
+                <i class="fa-solid fa-circle"></i>
+            </span>
+            <p>Record</p>
+        </div>
+        <div class="nav_Elements">
+
+            <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="nav_Elements">
+            <i class="fa-solid fa-rotate-left"></i>
+            <p>Undo</p>
+        </div>
+        <div class="nav_Elements">
+            <i class="fa-solid fa-rotate-right"></i>
+            <p>Redo</p>
+        </div>
+        <div class="nav_Elements">
+            <i class="fa-solid fa-upload"></i>
+            <p>
+                <a onclick="Export()">Export</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="sec-2">
+        <div id="canvas">
+            <div id="option">
+                <button onclick="toggleDraw()">Draw &#9998;</button>
+                <input type="color" id="color" onchange="pickColor()">
+                <button onclick="createTextbox()"> Text box</button>
+                <button onclick="deleteObject()"> Delete &#10006</button>
+                <select id="width" onchange="brushWidth()">
+                    <option value="2">2px</option>
+                    <option value="6">6px</option>
+                    <option value="2">10px</option>
+                    <option value="12">12px</option>
+                    <option value="16">16px</option>
+                    <option value="24">24px</option>
+                </select>
+            </div>
+            <canvas id="demoCanvas" />
+        </div>
+        <div id="sidebar">
+            <div class="disnone">
+                <div>
+                    <p class="side-heading">Media Library</p>
+                </div>
+                <div class="side-ul">
+                    <ul>
+                        <li class="side-active">PROJECT</li>
+                        <li>STOCK</li>
+                        <li>FAVORITES</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="files disnone">
+                <form id="form">
+                    <input type="submit" id="fileUpload" onclick="loadFile(event)">
+                </form>
+                <i class="fa-solid fa-cloud-arrow-up side-files"></i>
+                <p class="side-files">Click or drag & drop to upload more</p>
+            </div>
+            <div id="img_preview">
+                <img src="" alt="" id="output">
+            </div>
+
+            <div id="arrow" class="arrow">
+                <i class="fa-solid fa-less-than dis_none" id="less"></i>
+                <i class="fa-solid fa-greater-than" id="more"></i>
+            </div>
+        </div>
+    </div>
+    <div id="worning">
+        <div>
+            ☹️
+        </div>
+        <div>
+            <h1>Opps! Resolution Error!</h1>
+        </div>
+        <div>
+            <p>
+                Your screen size is not compatible for this editor.The editor containe high level of graphic designing
+                and video editing. Try to use other screen. This Editor can only Run in
+                1024px or Above Screen Size. We are sorry for the inconvenience.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="module">
+    import { navbar, navbarResponse, navbarResponse1 } from "./components/production.js";
+
+    document.getElementById("navbar").innerHTML = navbar();
+    navbarResponse();
+    navbarResponse1();
+</script>
+<script>
+    let data = JSON.parse(localStorage.getItem("templateDetails"));
+
+    let arrowBtn = document.getElementById("arrow");
+
+    arrowBtn.addEventListener("click", () => {
+        document.getElementById("less").classList.remove("dis_none");
+        document.getElementById("more").className = "dis_none";
+        document.getElementById("img_preview").className = "dis_none"
+        document.getElementById("sidebar").style.width = "20px";
+        document.getElementById("sidebar").style.marginLeft = "98%";
+        let x = document.querySelectorAll(".disnone");
+        x.forEach(el => {
+            el.className = "dis_none";
+        })
+
+        arrowBtn.id = "arrow2";
+    })
+
+
+    const myCanvas = new fabric.Canvas("demoCanvas", {
+        width: window.innerWidth - 800,
+        height: window.innerHeight - 300,
+        backgroundColor: "white",
+        isDrawingMode: false,
+    });
+
+
+
+    const toggleDraw = () => {
+        myCanvas.set({ isDrawingMode: !myCanvas.get("isDrawingMode") });
+    };
+
+    const createTextbox = () => {
+        const textbox = new fabric.Textbox("Enter Text", {
+            editable: true,
+            width: 400,
+        });
+        myCanvas.add(textbox);
+    };
+    const deleteObject = () => {
+        myCanvas.clear();
+    }
+    const pickColor = () => {
+
+        let temp = document.querySelector("#color").value;
+        console.log(temp);
+        let result = ntc.name(`${temp}`);
+
+        let rgb_value = result[0];
+        myCanvas.freeDrawingBrush.color = `${rgb_value}`;
+    }
+
+    const brushWidth = () => {
+        myCanvas.freeDrawingBrush.width = document.getElementById("width").value;
+    }
+
+
+    let form = document.getElementById("form");
+    const getData = () => {
+        event.preventDefault();
+
+    }
+
+    form.addEventListener("submit", getData);
+
+    const loadFile = (event) => {
+        fabric.Image.fromURL(`${data.cover_image_url}`, (img) => {
+            myCanvas.add(img);
+        })
+    };
+
+
+    const openDesign = () => {
+        document.getElementById("option").style.display = "block";
+    }
+
+
+    const Export = () => {
+        let projectName = prompt("Enter Project Name Here");
+
+        let canvas = document.getElementById("demoCanvas");
+        image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        let link = document.createElement('a');
+
+        link.download = `${projectName}.png`;
+        link.href = image;
+        link.click();
+    }
+</script>

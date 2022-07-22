@@ -97,7 +97,11 @@
         font-weight: 600;
         background-color: #23408c;
         color: white;
-        transition: all .2s ease;
+        transition: all .1s ease;
+    }
+
+    #last-sec>button:active {
+        transform: scale(.9);
     }
 
     #last-sec>button:hover {
@@ -110,6 +114,53 @@
         color: #23408c;
         font-weight: 600;
         cursor: pointer;
+    }
+
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        .main_Container {
+            width: 100%;
+        }
+
+        #sec-1_main {
+            width: 50%;
+        }
+
+        #sec-2_main {
+            margin-left: 10%;
+        }
+    }
+
+    @media all and (min-width: 320px) and (max-width: 767px) {
+        .main_Container {
+            padding: 0;
+        }
+
+        #sec-1_main {
+            display: none;
+        }
+
+        #sec-2_main {
+            padding: 0;
+            width: 100%;
+        }
+
+        #main_heading {
+            font-size: 1.7rem;
+        }
+
+        #last-sec {
+            display: block;
+        }
+
+        #last-sec>button {
+            width: 50%;
+        }
+
+        #last-sec>p {
+            margin-left: 10px;
+            margin-top: 20px;
+        }
     }
 </style>
 
@@ -146,8 +197,8 @@
                     <p id="grate_for"></p>
                 </div>
                 <div id="last-sec">
-                    <button>GET STARTED</button>
-                    <p>VIEW ALL TEMPLATES</p>
+                    <button id="editor">GET STARTED</button>
+                    <p id="back">VIEW ALL TEMPLATES</p>
                 </div>
             </div>
         </div>
@@ -228,5 +279,12 @@
         }
     }
 
+    document.getElementById("back").addEventListener("click", () => {
+        window.location.href = "./allteamplates.html"
+    })
+
+    document.getElementById("editor").addEventListener("click", () => {
+        window.location.href = "./editor.html";
+    })
 
 </script>
