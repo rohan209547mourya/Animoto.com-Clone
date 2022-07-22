@@ -57,7 +57,7 @@
         display: flex;
         cursor: pointer;
       }
-      .create {
+      #create {
         width: 300px;
         height: 50px;
         background-color:#23408c;
@@ -87,13 +87,14 @@
 </head>
 <body>
     <h2>New to Animoto? <a href="../signup/signup.html">Sign up free</a></h2>
+    
     <div id="login">
    <h1>WELCOME BACK</h1>
    <p>Log in to create your next video.</p>
    <form>
-    <input type="email" class="email" placeholder="Email" />
-    <input type="password" class="password" placeholder="Password" />
-    <button class="create">LOG IN WITH EMAIL</button>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="create">LOG IN WITH EMAIL</button>
     <h4 class="or">------------------------------------------------------------Or------------------------------------------------------------</h4>
     <button>
         <div id="button">
@@ -125,3 +126,40 @@
 </div>
 </body>
 </html>
+<script>
+  document.querySelector("#create").addEventListener("click",customerDApp);
+let singinArr=JSON.parse(localStorage.getItem("customerData"))||[]
+
+function customerDApp(){
+event.preventDefault();
+let singinObj={
+
+ cEmail:document.querySelector("#email").value,
+ cPassword:document.querySelector("#password").value,
+ 
+};
+
+
+let flag=false;
+
+for(let i=0;i<singinArr.length;i++){
+   if(singinArr[i].cEmail==singinObj.cEmail&&singinArr[i].cPassword==singinObj.cPassword){
+      flag=true;
+   }
+   
+}
+if(flag){
+  alert("LogIn sucssefully");
+ localStorage.setItem("system","online"); 
+ window.location.href="../index.html";
+}
+else{
+   alert("LogIn failed");
+   window.location.href="../signup/signup.html";
+
+}
+
+
+}
+
+</script>

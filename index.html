@@ -1,11 +1,3 @@
-<!-- https://animoto.com/static/TealDots-212c4a91665ce0cc624cdf92514a34d6.svg -->
-<!--https://animoto.com/static/YellowCorner-d367eaf0eeff2a90f1d4d374e3b1c3e8.svg-->
-<!--https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg-->
-<!-- https://d2of6bhnpl91ni.cloudfront.net/cms/03_New%20Aspirational%20V2_YT_Stream-b0e722c3fc.mp4
-https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg -->
-
-
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,90 +5,209 @@ https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Poppins", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* ----------------------Navbar------------------------------------ */
       #navbar {
-        margin-top: auto;
         width: 100%;
         height: 80px;
         display: flex;
-        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      #navbar > img:first-child {
+        width: 305px;
+      }
+      #BARoption {
+        margin: auto;
+        display: flex;
+        position: absolute;
+        gap: 25px;
+        margin-left: 27%;
+        align-items: center;
+        margin-top: 25px;
+        color: #23408c;
+        font-size: 13px;
+      }
+      #BARoption > a > h2:hover {
+        color: #232323;
+      }
+      #BARoption2 > a > h2:hover {
+        color: #232323;
+      }
+      #navbar > img + img {
+        width: 200px;
+        position: absolute;
+        left: 4%;
+        top: 2.5%;
+        float: left;
+      }
+      #BARoption2 {
+        margin: auto;
+        display: flex;
+        position: absolute;
+        gap: 25px;
+        margin-left: 83%;
+        align-items: center;
+        margin-top: 27px;
+        color: #23408c;
+        font-size: 11px;
+      }
+      #BARoption > a {
+        color: #23408c;
+      }
+      #BARoption2 > a {
+        color: #23408c;
+      }
+      #learn {
+        margin-top: -4px;
+      }
+      /* --------------------------create hover------------------- */
+      #createHide {
+        position: absolute;
+        margin-top: 0%;
         background-color: white;
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      h4 {
-        color: #234a95;
-        text-decoration: solid;
-      }
-      #logo > img {
-        cursor: pointer;
+        height: 300px;
         width: 100%;
-        height: 100%;
-        text-align: center;
-      }
-      #header {
-        display: flex;
-        justify-content: space-between;
-        width: 40%;
-        padding-left: 20px;
-
-        margin-right: 250px;
-      }
-      #lsp {
-        display: flex;
-        width: 300px;
-        justify-content: space-evenly;
-         margin-left: 300px;
-      }
-      #lsp > div > a {
-        text-decoration: none;
-      }
-      .drop1{
-       border: 1px solid black;
-        display: flex;
-        width: 1000px;
-        height: 150px;
-        justify-content:space-around;
+        margin-left: 0%;
         display: none;
-        
+        z-index: 1;
       }
-      .drop1>.sec{
-        margin-top: 40px;
+      #Create {
+        position: absolute;
+        top: 2.8%;
+        left: 20%;
+        color: #23408c;
+        font-size: 21px;
+        padding-bottom: 40px;
       }
-      #byvideo1{
-        display: flex;
+      #Create:hover {
+        color: #181c47;
+      }
+      #Create:hover + #createHide {
+        display: block;
+      }
+      #createHide:hover {
+        display: block;
+      }
+      /* ---------------Create Hide part-------------------- */
+      #CREAteOption {
+        width: 70%;
+        height: 50%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+        margin-top: 60px;
+      }
+      #CREAteOption > div {
+        display: grid;
+        justify-content: space-around;
+      }
+      #CREAteOption > div > a {
+        color: rgb(54, 52, 52);
+        font-size: 20px;
+        text-align: left;
+        color: #23408c;
+      }
+      #learn {
+        position: absolute;
+        top: 3.3%;
+        left: 48.2%;
+        color: #23408c;
+        font-size: 21px;
+        padding-bottom: 40px;
+      }
+      #learnHide {
+        position: absolute;
+        margin-top: 0%;
+        background-color: white;
+        height: 300px;
+        width: 100%;
+        margin-left: 0%;
+        display: none;
+        z-index: 1;
+      }
+      #learn:hover + #learnHide {
+        display: block;
+      }
+      #learnHide:hover {
+        display: block;
+      }
+      #learnHideOption {
+        width: 70%;
+        display: grid;
+        margin: auto;
+        height: 65%;
+        margin-top: 60px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      #learnHideOption > div {
+        display: grid;
+        text-align: left;
+      }
+      #learnHideOption > div > img {
+        width: 60px;
+      }
+      #learnHideOption > div > a {
+        font-size: 20px;
+        color: #23408c;
+      }
+      #learnHideOption > div > p {
+        font-size: 19px;
+        color: rgb(48, 46, 46);
+        width: 80%;
+        line-height: 30px;
+      }
+      #learnHideOption > div > a:hover {
+        color: #181c47;
+        background-color: white;
+      }
+      /* ************************Footer********************** */
 
-      }
       #footer {
         display: flex;
         height: 500px;
         background-color: #dadada;
         justify-content: space-evenly;
-        margin-top: 50px;
       }
       #footer > div {
-        margin-top: 80px;
+        margin-top: 70px;
       }
       h5 {
         color: grey;
+        padding-bottom: 20px;
+        cursor: pointer;
+      }
+      h3 {
+        padding-bottom: 20px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: ProximaNova, helvetica neue, helvetica, arial, sans-serif;
       }
       #sm > img {
         width: 200px;
         height: 40px;
         margin-bottom: 30px;
-        cursor: pointer;
       }
       #fb > img {
         width: 110px;
         height: 60px;
-        cursor: pointer;
+
         margin-left: 20px;
         margin-bottom: 30px;
       }
       #yt > img {
         width: 80px;
         height: 30px;
-        cursor: pointer;
       }
+
+      /************************Bottom*************************/
       #bottom {
         height: 100px;
         background-color: #232323;
@@ -107,82 +218,761 @@ https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg
         height: 80px;
         margin-top: 20px;
       }
-      .create{
+      /************************HomePage***********************/
+      #top_body {
+        width: 100%;
+        height: 600px;
+        background-color: #f3f3f9;
+        display: flex;
+      }
+      #top_right {
+        width: 50%;
+        height: 100%;
+      }
+      .one {
+        width: 260px;
+        height: 500px;
+        margin-top: -198px;
+        position: absolute;
+      }
+      .two {
+        width: 150px;
+        height: 150px;
+        margin-top: 55px;
+        position: relative;
+        margin-left: -20px;
+      }
+      .doit {
+        display: flex;
+        position: absolute;
+        margin-top: -138px;
+        margin-left: -30px;
+      }
+      .doit > h4 {
+        margin: 50px 150px 100px;
+      }
+      .doit > img {
+        width: 120px;
+        margin-left: -140px;
+        margin-top: -50px;
+      }
+      #easily {
+        width: 100%;
+        height: 50%;
+        margin-top: -50px;
+      }
+      #easily > h1 {
+        color: #181c47;
+        font-size: 50px;
+        font-family: PlayfairDisplay-Bold, serif;
+        margin-left: 120px;
+        font-size: 80px;
+      }
+      #easily > p {
+        font-size: 20px;
+        font-family: ProximaNova, helvetica neue, helvetica, arial, sans-serif;
+        margin-left: 120px;
+        margin-top: 40px;
+      }
+      button {
+        width: 230px;
+        height: 50px;
+        background-color: #23408c;
+        color: white;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 50px 0px 0px 120px;
         cursor: pointer;
       }
-      .drop1 h4{
+
+      video {
+        position: relative;
+        width: 600px;
+        height: 350px;
+        margin-top: 100px;
+        margin-left: 50px;
+      }
+      .green {
+        width: 100px;
+        margin-left: 660px;
+
+        position: absolute;
+      }
+      #vediobgimage {
+        margin-top: 170px;
+        margin-left: 80px;
+        height: 300px;
+        width: 600px;
+        background-image: url(https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg);
+        position: absolute;
+      }
+      #wave {
+        width: 100%;
+        height: 250px;
+      }
+      .h1middle {
+        margin-top: -100px;
+        text-align: center;
+        color: #181c47;
+        font-family: PlayfairDisplay-Bold, serif;
+        font-size: 50px;
+      }
+      .wave2 {
+        width: 150px;
+        padding-left: 680px;
+        background-size: 121px 9px;
+        height: 60px;
+        }
+        #middle{
+            width: 75%;
+            height: 250px;
+            display: flex;
+            justify-content:space-evenly;
+           text-align: center;
+            margin-left: 200px;
+        }
+        .drag{
+            width: 27%;
+        }
+        .drag>img{
+            width: 130px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .drag>h3{
+            font-size: 17px;
+        }
+        .drag>p{
+        font-family:ProximaNova,helvetica neue,helvetica,arial,sans-serif;
+        font-size: 17px;
+        font-weight: bold;
         color: gray;
-      }
-      .create:hover .drop1{
-        display: block;
-      }
+    }
+    .make{
+            width: 30%;
+        }
+        .make>img{
+            width: 150px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .make>h3{
+            font-size: 17px;
+        }
+        .make>p{
+        font-family:ProximaNova,helvetica neue,helvetica,arial,sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        color: gray;
+    }
+    .set{
+            width: 30%;
+        }
+        .set>img{
+            width: 150px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .set>h3{
+            font-size: 17px;
+        }
+        .set>p{
+        font-family:ProximaNova,helvetica neue,helvetica,arial,sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        color: gray;
+    }
+    #button{
+        margin-left: 650px;
+        margin-top: -20px;
+    }
+    .learn{
+        padding-bottom:2px;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        width: fit-content;
+        margin-top: 30px;
+        color: #23408c;
+        margin-left: 600px;
+    }
+    #Everythingyouneed{
+      width: 98%;
+      margin-left:20px;
       
-     
+
+    }
+    #Everythingyouneed>h1{
+      text-align: center;
+      padding-top: 20px;
+      
+    }
+    .wave3{
+      width: 100px;
+      height: 30px;
+      margin-left: 690px;
+      
+    }
+    #first-child{
+      padding-top: 50px;
+height: 400px;
+display: flex;
+margin-bottom: 100px;
+
+}
+#rightbox{
+  width: 35%;
+  
+  margin: 0px 70px;
+ 
+  }
+  #rightbox>h1{
+    width: 400px;
+    color: #181c47;
+        font-size: 50px;
+        font-family: PlayfairDisplay-Bold, serif;
+        margin-left: 120px;
+        font-size: 50px;
+  }
+  #rightbox>h4{
+    width: 400px;
+    color:rgb(195, 173, 145);
+    font-size: 18px;
+        font-family: ProximaNova, helvetica neue, helvetica, arial, sans-serif;
+        margin-left: 120px;
+        margin-top: 40px;
+        font-weight: lighter;
+  }
+
+#videobox{
+  width: 700px;
+  height: 400px;
+  margin-top: -50px;
+}
+  .button1{
+    border: 3px solid #083095;
+    background-color: white;
+    color:#083095;
+
+  }
+  #second-child{
+      padding-top: 50px;
+height: 400px;
+display: flex;
+margin-bottom: 100px;
+  }
+  #Third-child{
+      padding-top: 50px;
+height: 400px;
+display: flex;
+margin-bottom: 100px;
+  }
+  #forth-child{
+padding-top: 50px;
+height: 400px;
+display: flex;
+margin-bottom: 100px;
+  }
+  #imagineit{
+    display: flex;
+    border: 1px solid red;
+    width: 50%;
+    height: auto;
+    background-color:#f3f3f9;
+
+  }
+#topheading{
+  text-align: center;
+  font-size: 23px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#topheading>h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: rgba(69, 83, 65, 0.899);
+
+}
+
+  #customers{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 400px;
+    text-align: center;
+    margin-left: 230px;
+    margin-bottom: 50px;
+  }
+  .wave4{
+    width: 125px;
+    height: 30px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+  }
+  #matt{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+  }
+
+  #matt>img{
+    width:120px;
+    padding-bottom:20px;
+  }
+  #matt>p{
+    font-size:18px;
+    color:rgb(149, 48, 65);
+  }
+  #rebecca{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #rebecca>img{
+    width:120px;
+    padding-bottom:20px;
+  }
+  #rebecca>h4{
+    padding-bottom: 20px;
+
+  }
+  #rebecca>p{
+    font-size:18px;
+    color: rgb(149, 48, 65);
+  }
+  #mary{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #mary>img{
+    width:120px;
+    padding-bottom:20px;
+  }
+  #mary>p{
+    font-size:18px;
+    color:rgb(149, 48, 65);
+    padding-top: 20px;
+  }
+  #partner{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-left: 150px;
+    margin-bottom: 50px;
+
+  }
+  #partner>div>img{
+    width: 150px;
+    margin-top: -10px;
+    text-align: center;
+  }
+  .ph3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+  
+
+
     </style>
   </head>
-  <!-- //***********************Header***********************************// -->
   <body>
+    <!--*************************Navbar***********************************-->
     <div id="navbar">
-      <div id="logo">
-        <img src="https://i.im.ge/2022/07/19/FF54FF.jpg" alt="logo" />
+      <img
+        src="https://animoto.com/static/AnimotoLogoBlobs-afa5652205594807da50c94d53f42b86.svg"
+        alt=""
+      />
+      <img
+        src="https://animoto.com/static/logo-1d220e413f4f69fa42d66d93381db371.svg"
+        alt=""
+      />
+      <div id="BARoption">
+        <a href=""><h2>Templates</h2></a>
+        <a href=""><h2>Features</h2></a>
+        <a href=""><h2>Pricing</h2></a>
       </div>
-      <div id="header">
-        <h4 class="create">CREATE</h4>
-        <!-- <div class="drop1">
-            <div id="byvideo">
-              <h3>BY VIDEO TYPE</h3>
-              <h4>Promo Video</h4>
-              <h4>Slideshow Video</h4>  
-              <h4>Social media Video</h4>
-            </div>
-             <div class="sec">
-            <h4>Tutorial Video</h4>
-            <h4>Birthday Video</h4>
-            <h4>Graduation video</h4>
-          </div>
-            <div id="byindustry">
-              <h3>BY INDUSTRY</h3>
-              <h4>Business</h4>
-              <h4>Real estate</h4>
-              <h4>Photography</h4>
-              </div>
-              <div class="sec">  
-                <h4>E-commerce</h4>
-                <h4>Education</h4>
-                <h4>Non-profit</h4>
-              </div>
-             
-        </div> -->
-        <h4>TEMPLATES</h4>
-        <h4>FEATURES</h4>
-        <h4>PRICING</h4>
-        <h4>LEARN</h4>
+      <div id="BARoption2">
+        <a href="./login/login.html"><h2>LOG IN</h2></a>
+        <a href="./signup/signup.html"><h2>SIGN UP FREE</h2></a>
       </div>
-      <div id="lsp">
-        <div>
-            <a href="./login/login.html"> <h4>LOG IN</h4>
+    </div>
+    <!-----------------------------(Navar) --Create Hover---------------------------------- -->
+    <h2 id="Create">Create⮟</h2>
+    <div id="createHide">
+      <div id="CREAteOption">
+        <div id="BY">
+          <h3>BY VIDEO TYPE</h3>
+          <a href="">Promo video</a>
+          <a href="">Slideshow video</a>
+          <a href="">Social media video</a>
+        </div>
+        <div style="margin-top: 25px">
+          <h3></h3>
+          <a href="">Tutorial video</a>
+          <a href="">Birthday video</a>
+          <a href="">Graduation video</a>
         </div>
         <div>
-          <a href="./signup/signup.html"> <h4>SIGN UP FREE</h4></a>
+          <h3>BY INDUSTRY</h3>
+          <a href="">Business</a>
+          <a href="">Real estate</a>
+          <a href="">Photography</a>
+        </div>
+        <div style="margin-top: 24px">
+          <h3></h3>
+          <a href="">E-commerce</a>
+          <a href="">Education</a>
+          <a href="">Non-profit</a>
         </div>
       </div>
+    </div>
+    <!-- ---------------------------------- -->
+    <!-- -----------------Navbar Learn hide part-------------------->
+    <h2 id="learn">Learn⮟</h2>
+    <div id="learnHide">
+      <div id="learnHideOption">
+        <div>
+          <img
+            src="https://i.postimg.cc/KY00Pf0G/Screenshot-2022-07-21-113201.png"
+            alt=""
+          />
+          <a href="">Tutorials</a>
+          <p>Learn how to create videos with Animoto.</p>
+        </div>
+        <div>
+          <img
+            src="https://i.postimg.cc/FKCxdRK1/Screenshot-2022-07-21-113239.png"
+            alt=""
+          />
+          <a href="">Success stories</a>
+          <p>See inspiration from real life businesses.</p>
+        </div>
+        <div>
+          <img
+            src="https://i.postimg.cc/xjMKYgLX/Screenshot-2022-07-21-113255.png"
+            alt=""
+          />
+          <a href="" style="margin-top: 10px">Blog</a>
+          <p>Read guides, video tips, and more.</p>
+        </div>
+        <div>
+          <img
+            src="https://i.postimg.cc/pLX8fH4j/Screenshot-2022-07-21-113316.png"
+            alt=""
+          />
+          <a href="">Help Center</a>
+          <p>Get support from our Customer Team.</p>
+        </div>
       </div>
-      <!--********************Home**************************-->
-      
-     
-     <!-- //******************Footer*********************// -->
+    </div>
+
+    <!--********************Home**************************-->
+    <div id="top_body">
+      <div id="top_right">
+        <div>
+          <img
+            class="one"
+            src="https://animoto.com/static/YellowCorner-d367eaf0eeff2a90f1d4d374e3b1c3e8.svg"
+            alt=""
+          />
+          <img
+            class="two"
+            src="https://animoto.com/static/TealDots-212c4a91665ce0cc624cdf92514a34d6.svg"
+            alt=""
+          />
+        </div>
+        <div class="doit">
+          <h4>DO - IT - YOURSELF</h4>
+          <img
+            src="https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg"
+            alt="wave"
+          />
+        </div>
+        <div id="easily">
+          <h1>Easily make your own videos</h1>
+          <p>
+            Join millions of people creating and sharing videos with our easy
+            drag and drop video maker. No experience necessary.
+          </p>
+          <a href="./signup/signup.html"><button>GET STARTED FREE</button></a>
+        </div>
+      </div>
+      <div id="top_left">
+        <div id="vediobgimage"></div>
+        <div >
+          <video id="video"
+            controls=""
+            autoplay
+            muted
+            data-src="https://d2of6bhnpl91ni.cloudfront.net/cms/03_New%20Aspirational%20V2_YT_Stream-b0e722c3fc.mp4"
+            loop=""
+            playsinline=""
+            src="https://d2of6bhnpl91ni.cloudfront.net/cms/03_New%20Aspirational%20V2_YT_Stream-b0e722c3fc.mp4"
+          ></video>
+        </div>
+        <div class="green">
+          <img
+            src="https://animoto.com/static/GreenSplats-15fc0323bde2b75a41736eea23e94dc7.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div id="wave">
+      <img
+        src="	https://animoto.com/static/desktop-wiggle-63f5acc89165c256b6b908672b369bd9.svg"
+        alt=""
+      />
+    </div>
+
+    <h1 class="h1middle">Create professional videos for work and life</h1>
+    <img
+      class="wave2"
+      src="https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg"
+      alt="wave"
+    />
+    <div id="middle">
+      <div class="drag">
+        <img
+          src="https://images.ctfassets.net/00i767ygo3tc/56cuaWEbN3xseXjRR0sQ4I/0f5d203d20d91e6842025bb663c7698b/DragDropIllustration.png?w=420&h=393&q=80&fm=webp"
+          alt="drag drop img"
+        />
+        <h3>DRAG AND DROP</h3>
+        <p>
+          Upload photos and clips into an easy-to-use template or start from
+          scratch.
+        </p>
+      </div>
+      <div class="make">
+        <img
+          src="https://images.ctfassets.net/00i767ygo3tc/1XFBgrueGvHAxZSK0YPhXb/720a71e523ac18c9a31e0c67331ec1a6/CreateIllustration.png?w=192&h=179&q=80&fm=webp"
+          alt="make it own img"
+        />
+        <h3>MAKE IT YOUR OWN</h3>
+        <p>Customize your video with colors, fonts, transitions, and more.</p>
+      </div>
+      <div class="set">
+        <img
+          src="https://images.ctfassets.net/00i767ygo3tc/6bU5NmAVxhr7HQ1WXYWkGR/d4b3cb8c13ffaa12f5c5393f5f34c84d/MusicLibraryIllustration.png?w=239&h=223&q=80&fm=webp"
+          alt="set to music"
+        />
+        <h3>SET TO MUSIC</h3>
+        <p>
+          Bring your video to life with a licensed song from our music library.
+        </div>
+    </div>
+          <a href="./signup/signup.html"><button id="button">GET STARTED FREE</button></a>
+        </p>
+
+        <h3 class="learn">LEARN MORE ABOUT ANIMOTO'S FEATURES</h3>
+        <div>
+          <div>
+        <h3>IMAGINE IT . CREATE IT .</h3>
+        <h1>Create quickly with video templates</h1> 
+        <img
+      class="wave2"
+      src="https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg">
+      <alt="wave">
+    </div>
+  </div>
+  <diV id="imagineit">
+      <div id="socialtrends">
+        <h5>Social Trends</h5>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhft5/42bf42308d5b26a2fb1a15a89bba7c0c/Make-a-facebook-video-_2x-1b91f5bc33.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>TELL A TRAVEL STORY</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/2yEqvP358BvnUdigwAVlV2/2e7ebccf696d147107107522a1a71b09/Trend_Story.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>TRENDING TOPIC</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/1kDoozfRhRamTTcZsuzKMG/a078ab26d8aeed5c00701c7978d9e24a/make_your_own_monday_motivation_video.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4># MONDAY MOTIVATION</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+      </div>
+
+      <div id="business">
+        <h5>BUSINESS</h5>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhft8/3cd037d0f2be2f512214e75dee69eddb/Real_Estate_Listing.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>REAL ESTATE LISTING</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhft9/fa0945721778cd756f0293c59ba36620/Digital_Album.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>DIGITAL ALBUM</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhfta/3f9e77def9ea8ddec5b1bfdf25e3f1e7/About_Us.jpg?w=525&h=295&q=50&fm=webp" alt="business">
+        <h4>ABOUT US</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+      </div>
+
+      <div id="promo videos">
+        <h5>PROMO VIDEOS</h5>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhft8/3cd037d0f2be2f512214e75dee69eddb/Real_Estate_Listing.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>NEW LAUNCH PROMO</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhft9/fa0945721778cd756f0293c59ba36620/Digital_Album.jpg?w=525&h=295&q=50&fm=webp" alt="socialtrends">
+        <h4>COLLECTION PORTFOLIO</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhfta/3f9e77def9ea8ddec5b1bfdf25e3f1e7/About_Us.jpg?w=525&h=295&q=50&fm=webp" alt="business">
+        <h4>BITE-SIZED PRODUCT INTRO</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+      </div>
+
+      <div id="celebration">
+        <h5>CELEBRATIONS</h5>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/5SyNIS6eCZZUkN8KtRQQKU/abe514429db5299db815f5456ea46e2b/AnniversaryCelebration-min.jpg?w=525&h=295&q=50&fm=webp" alt="CELEBRATION">
+        <h4>ANNIVERSARY CELEBRATION</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhfte/e500983434b4ae1351d513c3a6331dd7/BirthdayCard.jpg?w=525&h=295&q=50&fm=webp" alt="CELEBRATION">
+        <h4>BIRTHDAY CARD</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhftf/49ab80423ec9059cba97f354043f4026/Engagement_Slideshow.jpg?w=525&h=295&q=50&fm=webp" alt="CELEBRATION">
+        <h4>ENGAGEMENT SLIDESHOW</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+      </div>
+
+      <div id="personal">
+        <h5>PERSONAL</h5>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhfth/07f6462c449019e5800f103859423153/VideoResume.jpg?w=525&h=295&q=50&fm=webp" alt="PERSONAL">
+        <h4>VIDEO RESUME</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/asset-sktwi7jfjxrnhfti/5e88b8d9d908427f1b450d5b539be1db/self_introduction.jpg?w=525&h=295&q=50&fm=webp" alt="PERSONAL">
+        <h4>SELF-INTRODUCTION</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+        <img src="https://images.ctfassets.net/00i767ygo3tc/737fg1qyv2EqV06YLUSfio/a9b5a5a639a937d63684fbd3904c8894/EducationalPresentation-min.jpg?w=525&h=295&q=50&fm=webp" alt="PERSONAL">
+        <h4>EDUCATIONAL PRESENTATION</h4>
+        <BUTTON>USE THIS TEMPLATE</BUTTON>
+      </div>
+      <h4>SEE ALL TEMPLATES</h4>
+    </diV>
+   
+    
+
+      <div id="Everythingyouneed">
+        <h1>Everything you need to create stunning videos</h1>
+        <img
+      class="wave3"
+      src="https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg"
+      alt="wave"
+    />
+    <div id="first-child">
+      <div id="rightbox">
+        <h1>Stock images and music at your fingertips</h1>
+        <h4>Save time and money tracking down stock media with our built-in library of millions of photos, video clips, and graphics from Getty Images. Set the mood with one of 3,000+ licensed songs.</h4>
+        <a href="./signup/signup.html"><button class="button1">GET STARTED FREE</button></a>
+      </div>
+      <div >
+        <video id="videobox"
+        controls=""
+        autoplay
+        muted
+        loop=""
+        src="https://d2of6bhnpl91ni.cloudfront.net/cms/12-2020_StockGraphic_Homepage_A3_ForAnimation%20(1)-50f8e6b637.mp4"
+      > </video>
+      </div>
+    </div>
+    </div>
+   
+  <div id="second-child">
+    <div >
+      <video id="videobox"
+      controls=""
+      autoplay
+      muted
+      loop=""
+      src="https://d2of6bhnpl91ni.cloudfront.net/cms/easily%20customize%20your%20videos-5cb98c4715.mp4"
+    ></video>
+    </div>
+    <div id="rightbox">
+      <h1>Easy customization tools</h1>
+      <h4>Make each video your own with intuitive color, font, and design tools. Add your logo as a watermark to build brand awareness.</h4>
+      <a href="./signup/signup.html"><button class="button1">GET STARTED FREE</button></a>
+    </div>
+  </div>
+  </div>
+
+  <div id="Third-child">
+    <div id="rightbox">
+      <h1>Unlimited video creation</h1>
+      <h4>Create square, landscape, and vertical videos to share to social media and beyond. There are no creation limits on any Animoto plan.</h4>
+      <a href="./signup/signup.html"><button class="button1">GET STARTED FREE</button></a>
+    </div>
+    <div >
+      <video id="videobox"
+      controls=""
+      autoplay
+      muted
+      loop=""
+      src="https://d2of6bhnpl91ni.cloudfront.net/cms/create-unlimited-videos-37b27ee358.mp4"
+    > </video>
+    </div>
+  </div>
+
+  <div id="forth-child">
+    <div >
+      <video id="videobox"
+      controls=""
+      autoplay
+      muted
+      loop=""
+      src="https://d2of6bhnpl91ni.cloudfront.net/cms/2022-06_CommentingLP-Graphic1-8bad680eab.mp4"
+    ></video>
+    </div>
+    <div id="rightbox">
+      <h1>Take the stress out of video feedback</h1>
+      <h4>No more juggling messy email threads and contradictory comments. Invite anyone to add time-stamped comments to your video. Reply and implement feedback right from your video editing workspace.</h4>
+      <a href=""><button class="button1">LEARN MORE</button></a>
+    </div>
+  </div>
+  </div>
+
+  <div>
+    <div id="topheading">
+      <h1>Hear from our customers</h1>
+      <img
+    class="wave4"
+    src="https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg">
+    <alt="wave">
+    </div>
+    <div id="customers">
+      <div id="matt">
+        <img src="https://images.ctfassets.net/00i767ygo3tc/5BqRKnEuMFaOAav2D4vSSJ/f9c069faa5c0f8f8831f4f7f6463d351/TestimonialOneIllustration.png?w=320&h=299&q=80&fm=webp" alt="matt cavallaro">
+        <h4>MATT CAVALLARO</h4><br>
+        <p>FOUNDER, NEST HOMEWARE 
+        “Running our Animoto video on Facebook and Instagram not only increased awareness of the Nest brand, but we also made 4x our usual online sales.”</p>
+      </div>
+      <div id="rebecca">
+        <img src="https://images.ctfassets.net/00i767ygo3tc/1TuMlRQQJMVXTOy7ZjjuPl/ac0c443010035659113644460fb34f81/TestimonialTwoIllustration.png?w=320&h=299&q=80&fm=webp" alt="Rebecca">
+        <h4>REBECCA FANCHER</h4>
+        <p>SR. DIRECTOR, AMERICAN HEART ASSOCIATION</p>
+          <p>“Our Animoto video was a quick way for us to let our audience know about our event, and show them how simple it was to register or donate. Plus, we can easily adjust our video so they work on all platforms. A true time-saver.”</p>
+      </div>
+      <div id="mary" >
+        <img src="https://images.ctfassets.net/00i767ygo3tc/bqjxtmuX7vs1uFe4uasV1/ef5338ce6588039752c6aff8fe89b843/TestimonialThreeIllustration.png?w=320&h=299&q=80&fm=webp" alt="mary">
+        <h4>MARY MANNIX</h4>
+        <p>FOUNDER, NEST HOMEWARE
+        “Running our Animoto video on Facebook and Instagram not only increased awareness of the Nest brand, but we also made 4x our usual online sales.”</p>
+      </div>
+    </div>
+  </div>
+  <h3 class="ph3">PARTNER OF</h3>
+    <div id="partner">
+      <div><img src="data:image/png;base64,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" alt="fb"></div>
+      <div><img src="data:image/png;base64,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" alt="yt"></div>
+      <div><img src="data:image/png;base64,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" alt="in"></div>
+      <div><img src="data:image/png;base64,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" alt="tw"></div>
+      <div><img src="https://r4ys.com/wp-content/uploads/2020/05/hubspot-partner.jpg" alt="hbs"></div>
+    </div>
+    
+    <!-- //******************Footer*********************// -->
     <div id="footer">
       <div>
-        <h3>
-          USES
-          <h5>Marketing video</h5>
-          <h5>Video ad</h5>
-          <h5>How-to video</h5>
-          <h5>Slideshow video</h5>
-          <h5>Social media</h5>
-          <h5>Promo video</h5>
-          <h5>Birthday video</h5>
-        </h3>
+        <h3>USES</h3>
+        <h5>Marketing video</h5>
+        <h5>Video ad</h5>
+        <h5>How-to video</h5>
+        <h5>Slideshow video</h5>
+        <h5>Social media</h5>
+        <h5>Promo video</h5>
+        <h5>Birthday video</h5>
       </div>
       <div>
         <h3>ANIMOTO FOR</h3>
@@ -196,13 +986,15 @@ https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg
       </div>
       <div>
         <h3>FEATURES</h3>
+        <h5>Video commenting tool</h5>
+        <h5>Screen Recorder</h5>
         <h5>Photo video maker</h5>
         <h5>Music library</h5>
         <h5>Online video editor</h5>
         <h5>Templates</h5>
         <h5>Video trimming</h5>
         <h5>Stock library</h5>
-        <h5>Stock library</h5>
+        <h5>iOS</h5>
       </div>
       <div>
         <h3>COMPANY</h3>
@@ -227,6 +1019,7 @@ https://animoto.com/static/desktop-image-bg-8ea06e38a522392f18df00037c063f3b.svg
         </div>
       </div>
     </div>
+    <!--*********************Bottom*************************-->
     <div id="bottom">
       <img src="https://i.im.ge/2022/07/19/FF3tMS.jpg" alt="" />
     </div>

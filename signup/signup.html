@@ -31,6 +31,8 @@
         border-radius: 10px;
         border: none;
         background-color: rgb(226, 225, 223);
+        margin-right: 50px;
+        font-size: 30px;
       }
       button {
         width: 300px;
@@ -49,7 +51,7 @@
         display: flex;
         cursor: pointer;
       }
-      .create {
+      #creat {
         width: 300px;
         height: 50px;
         font-style:italic;
@@ -73,10 +75,10 @@
       <h1>Create a free account</h1>
       <h3>Make and share unlimited videos for free</h3>
       <form>
-        <input type="email" class="email" placeholder="Email" />
+        <input type="email" id="email" placeholder="Email" />
 
-        <input type="password" class="password" placeholder="Password" />
-        <button class="create">CREATE AN ACCOUNT</button>
+        <input type="password" id="password" placeholder="Password" />
+        <button id="creat">CREATE AN ACCOUNT</button>
         <h4 class="or">~~~~~~~~~~~~~~~~~~~~ Or ~~~~~~~~~~~~~~~~~~~~</h4>
 
         <button>
@@ -94,3 +96,34 @@
     </div>
   </body>
 </html>
+<script>
+  document.querySelector("#creat").addEventListener("click",myproductApp);
+  let customerArr=JSON.parse(localStorage.getItem("customerData"))||[]
+  function myproductApp(){
+  event.preventDefault();
+  let customerObj={
+     cEmail:document.querySelector("#email").value,
+     cPassword:document.querySelector("#password").value,
+     
+   };
+  
+   let flag=true;
+   for(let i=0;i<customerArr.length;i++){
+   if(customerArr[i].cEmail==customerObj.cEmail){
+   flag=false;
+       }
+   }
+   if(flag){
+   customerArr.push(customerObj);
+   localStorage.setItem("customerData",JSON.stringify(customerArr)); 
+  
+   }
+   else{
+   alert("Email is alrady pragent singIn");
+  
+  }
+   
+   window.location.href="../login/login.html";
+  }
+      
+  </script>
