@@ -91,12 +91,21 @@ nav>div>ul>li {
     padding: 10px;
 }
 
-nav>div>ul>li:hover {
+nav>div>ul>li>a:hover {
     cursor: pointer;
     color: black;
 }
 
-#heading {
+li>a {
+    color: rgb(179, 184, 174);
+    text-decoration: none;
+}
+
+li>a:visited {
+    color: rgb(179, 184, 174);
+}
+
+s #heading {
     position: relative;
     max-width: 100vw;
 }

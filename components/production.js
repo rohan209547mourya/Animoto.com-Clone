@@ -5,7 +5,7 @@ const navbar = () => {
     return `        <nav>
     <div>
         <!--Logo Start-->
-        <a href="index.html">
+        <a href="../index.html">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137 32" width="137" height="32">
                 <path fill="#A5999B"
                     d="M51.95 20.595l-2.596-5.835-2.617 5.835h5.214zm-5.72 1.16l-1.357 3.025H43.55l5.215-11.524h1.21l5.212 11.524H53.8l-1.345-3.026H46.23zm13.442-8.415h1.21l7.208 9.167V13.34h1.26v11.44h-1.032l-7.388-9.384v9.385h-1.258zm15.256 0h1.29v11.44h-1.29zm7.19 0h1.31l4.812 8.174 4.81-8.175h1.308v11.44h-1.29v-8.95l-4.81 8.062h-.068l-4.812-8.047v8.93h-1.26zm27.138 5.75v-.033c0-2.597-1.895-4.724-4.512-4.724-2.62 0-4.48 2.092-4.48 4.692v.032c0 2.6 1.896 4.726 4.51 4.726 2.616 0 4.482-2.093 4.482-4.692m-10.332 0v-.03c0-3.155 2.37-5.917 5.85-5.917 3.483 0 5.82 2.73 5.82 5.886.016.015.016.015 0 .03 0 3.157-2.37 5.92-5.85 5.92-3.482 0-5.82-2.73-5.82-5.885m18.23-4.564h-3.843v-1.19h8.998v1.19h-3.844v10.25h-1.305zm18.43 4.56v-.032c0-2.597-1.896-4.724-4.51-4.724-2.616 0-4.48 2.092-4.48 4.692v.032c0 2.6 1.895 4.726 4.514 4.726 2.613 0 4.477-2.093 4.477-4.692m-10.33 0v-.03c0-3.156 2.37-5.918 5.853-5.918 3.478 0 5.816 2.73 5.816 5.886.017.016.017.016 0 .032 0 3.156-2.37 5.918-5.85 5.918-3.483 0-5.82-2.73-5.82-5.884" />
@@ -35,12 +35,12 @@ const navbar = () => {
     <!--Pages links-->
     <div>
         <ul>
-            <li>BUSINESS</li>
-            <li>PHOTOGRAPHY</li>
-            <li>FAMILY</li>
-            <li>PRICING</li>
-            <li>SIGN UP</li>
-            <li>LOG IN</li>
+            <li> <a href="./Business.html"> BUSINESS</a></li>
+            <li> <a href="./Photography.html"> PHOTOGRAPHY</a></li>
+            <li> <a href="#"> FAMILY</a></li>
+            <li> <a href="./pricing.html"> PRICING</a></li>
+            <li> <a href="#"> SIGN UP</a></li>
+            <li> <a href="#"> LOG IN</a></li>
         </ul>
     </div>
 
@@ -55,12 +55,12 @@ const navbar = () => {
 <!--Humburger Menu Items start-->
 <div id="menu_item">
     <ul>
-        <li>BUSINESS</li>
-        <li>PHOTOGRAPHY</li>
-        <li>FAMILY</li>
-        <li>PRICING</li>
-        <li>SIGN UP</li>
-        <li>LOG IN</li>
+        <li> <a href="./Business.html"> BUSINESS</a></li>
+        <li> <a href="./Photography.html"> PHOTOGRAPHY</a></li>
+        <li> <a href="#"> FAMILY</a></li>
+        <li> <a href="./pricing.html"> PRICING</a></li>
+        <li> <a href="#"> SIGN UP</a></li>
+        <li> <a href="#"> LOG IN</a></li>
     </ul>
 </div>
 <!--Humburger Menu Items End-->`
