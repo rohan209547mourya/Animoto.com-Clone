@@ -112,6 +112,7 @@
     ul {
         list-style: none;
         display: flex;
+        /* flex-wrap: wrap; */
         margin-left: 5px;
     }
 
@@ -290,7 +291,52 @@
         display: none;
     }
 
-    @media all and (min-width: 320px) and (max-width: 1024px) {
+    @media all and (min-width: 568px) and (max-width: 1024px) {
+        #sidebar {
+            display: none;
+        }
+
+        .nav_Elements_1 {
+            display: none;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .nav>.nav_Elements:nth-child(1) {
+            width: 80%;
+        }
+
+        .nav>.nav_Elements:nth-child(2) {
+            width: 110%;
+        }
+
+        .nav>.nav_Elements:last-child {
+            width: 60%;
+            margin-left: 50px;
+        }
+
+        #sec-2 {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #canvas {
+            width: 100%;
+            margin: auto;
+        }
+
+        ul {
+            flex-wrap: wrap;
+        }
+
+    }
+
+    @media all and (min-width: 320px) and (max-width: 767px) {
         #navbar {
             display: block;
         }
@@ -330,21 +376,21 @@
                 <p>Ratio</p>
             </div>
         </div>
-        <div class="nav_Elements">
+        <div class="nav_Elements  nav_Elements_1">
             <span class="circle">
                 <i class="fa-solid fa-circle"></i>
             </span>
             <p>Record</p>
         </div>
-        <div class="nav_Elements">
+        <div class="nav_Elements  nav_Elements_1">
 
             <i class="fa-solid fa-message"></i>
         </div>
-        <div class="nav_Elements">
+        <div class="nav_Elements  nav_Elements_1">
             <i class="fa-solid fa-rotate-left"></i>
             <p>Undo</p>
         </div>
-        <div class="nav_Elements">
+        <div class="nav_Elements  nav_Elements_1">
             <i class="fa-solid fa-rotate-right"></i>
             <p>Redo</p>
         </div>
