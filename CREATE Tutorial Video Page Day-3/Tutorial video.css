@@ -566,6 +566,9 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 30px;
       }
+      #FAQh1,#FAQh2,#FAQh3{
+        cursor: pointer;
+      }
       #FAQsI {
         background-color: #f3f3f9;
         padding: 10px;
@@ -619,6 +622,7 @@
         margin-top: -2px;
         margin-right: 10px;
         color: rgb(66, 62, 62);
+        cursor: pointer;
       }
       #blueImg {
         transform: rotate(180deg);
