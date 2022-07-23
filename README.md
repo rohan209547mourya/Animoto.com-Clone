@@ -2,11 +2,11 @@
 
 
 # Team Details:-
-Rohan Mourya (as a Team Lead)
-Abhishek Pratap Solanki (as a team member)
-Anmol Sharma (as a team member)
-Gaurav Shudhansu (as a team member)
-Sachin Kumar (as a team member)
+1. Rohan Mourya (as a Team Lead)
+2. Abhishek Pratap Solanki (as a team member)
+3. Anmol Sharma (as a team member)
+4. Gaurav Shudhansu (as a team member)
+5. Sachin Kumar (as a team member)
 
 
 # Project Details:-
