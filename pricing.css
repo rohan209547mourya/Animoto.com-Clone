@@ -76,11 +76,8 @@ nav>div>ul>li:hover {
     cursor: pointer;
     color: black;
 }
-
-
-
-
 /* header section css start */
+
 body{
     margin: 0;
     padding: 0;
@@ -122,7 +119,7 @@ body{
 .getstarted > h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 40px;
     color: #181C47;
 }
@@ -160,7 +157,7 @@ cursor: pointer;
 
 /* price table section starts here */
 .container {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: white;
     color: #181C47;
     
@@ -188,6 +185,7 @@ cursor: pointer;
       margin-bottom: 1.5rem;
   }
   .toggle-switch > span{
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
@@ -232,39 +230,73 @@ cursor: pointer;
       display: grid;
       grid-template-columns: repeat(4,25%);
      
-      gap: 5px;
+      /* gap: 5px; */
       
       width: 100%;
       
       height: 100%;
   }
+  .li-1{
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 80px;
+    background-color: #faf9f9;
+    padding: 20px;
+    text-align: left;
+    
+  }
+  .li-list{
+    background-color: #faf9f9;
+  }
   
   .card{
      height: auto;
-     width: 70%;
+     width: 100%;
      background-color: white; 
      border-radius: 15px;
      padding: 2rem;
      text-align: center;
      /* border: 1px solid blue; */
   }
-  
+  .card-plan >li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding-bottom: 40px;
+  }
   .card-title{
+    font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 1rem;
+      margin-bottom: 30px;
   }
-  
+  .head-p{
+    margin-bottom: 50px;
+    background-color: #faf9f9;
+    padding: 20px;
+    line-height: 25px;
+    /* letter-spacing: 1px; */
+  }
+  .billed{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #505050;
+    margin-left: 7px;
+  }
   .card-price{
+    font-family: 'Poppins', sans-serif;
       font-size: 3rem;
       text-align: center;
   }
   
   h2>span{
+    font-family: 'Poppins', sans-serif;
       font-size: 1rem;
   }
   
   #card-2 .card-price{
+    font-family: 'Poppins', sans-serif;
       font-size: 2rem;
   } 
   
@@ -272,9 +304,10 @@ cursor: pointer;
       margin-bottom: 4rem;
   }
   .card ul{
+    font-family: 'Poppins', sans-serif;
       text-align: center;
       font-size: 0.9rem;
-      font-weight: lighter;
+      font-weight: 400;
   }
   
   .card ul li:before{
@@ -291,28 +324,53 @@ cursor: pointer;
   .card ul{
     list-style: none;
   }
+  .navy{
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    color: rgb(106, 7, 163);
+    font-weight: bold;
+  }
+  .new{
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    color: rgb(245, 141, 22);
+    font-weight: bold;
+  }
 
   .card-btn{
       margin-top: 1rem;
       /* width: 100%; */
       /* background-color: white; */
+background-color: white;
     color: #181C47;
+    height: 4em;
+width: 16em;
+outline: none;
+border: 1px solid #181C47;
+border-radius: 5em;
+text-transform: uppercase;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: 700;
+margin-left: 1em;
+cursor: pointer;
+  }
+  
+.card-btn:hover{
+    background-color: rgb(33, 30, 108);
+    color: rgb(255, 255, 255);
     height: 4em;
 width: 16em;
 outline: none;
 border: none;
 border-radius: 5em;
-font-weight: 600;
-/* margin-left: 10px; */
+text-transform: uppercase;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: 700;
+margin-left: 1em;
 cursor: pointer;
-  }
-  
-  #card-1 .card-btn:hover, 
-  #card-3 .card-btn:hover, 
-  .active .card-btn
-  {
-      background-color: #bc1e4a;
-  }
+}
   
   
   
@@ -325,6 +383,125 @@ cursor: pointer;
 /* price table section ends here */
 
 
+/* 2nd grid section starts here */
+.accet-line{
+    background-color: #23408c;
+    width: 30px;
+    height: 2px;
+    margin: 0 auto 32px;
+}
+.h3-2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    color: #181C47;
+    text-align: center;
+}
+.features-grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto 85px;
+    max-width: 1280px;
+}
+.marketing-icon{
+    /* background-image: url("https://d2of6bhnpl91ni.cloudfront.net/images/site/unlimited-d000100c75.svg"); */
+    /* background-image: url(https://d2of6bhnpl91ni.cloudfront.net/images/site/unlimited-d000100c75.svg) no-repeat; */
+    background-size: 64px 1900px;
+    margin: 32px auto;
+    width: 64px;
+    height: 64px;
+   
+}
+.marketing-icon-4{
+    background-size: 64px 1900px;
+    margin: 32px auto;
+    width: 84px;
+    height: 64px;
+}
+.marketing-label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    letter-spacing: .08em;
+    text-transform: none;
+    color: #181C47;
+    text-align: center;
+    text-transform: uppercase;
+}
+.text-center{
+    text-align: center;
+    /* margin-bottom: 50px; */
+}
+.signup-btn2{
+    background-color: rgb(33, 30, 108);
+    color: rgb(255, 255, 255);
+    height: 4em;
+width: 16em;
+outline: none;
+border: none;
+border-radius: 5em;
+text-transform: uppercase;
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: 700;
+margin-left: 1em;
+cursor: pointer;
+}
+/* footer css */
+
+#footer {
+    display: flex;
+    height: 500px;
+    background-color: #dadada;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+  #footer > div {
+    margin-top: 50px;
+  }
+  #footer > div > h3 {
+    color: #181C47;
+  }
+  #footer > div > h5 {
+    font-size: 16px;
+    font-weight: 300;
+    color: grey;
+    margin-top: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+  #sm > img {
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #fb > img {
+    width: 110px;
+    height: 60px;
+  
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+  #yt > img {
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  #bottom {
+    height: 100px;
+    background-color: #232323;
+    text-align: center;
+  }
+  #bottom > img {
+    width: 400px;
+    height: 80px;
+    margin-top: 20px;
+  }
+  
 /* navbar media query */
 @media all and (min-width: 865px) and (max-width: 1264px) {
     nav>div:nth-child(1) {
@@ -400,3 +577,4 @@ cursor: pointer;
         color: #181C47;
     }
 }
+
