@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="templates.css">
+    <title>Recommended Video Templates - Animoto</title>
+</head>
+
+<body>
+    <!--Navbar Div-->
+    <div id="navbar"></div>
+
+    <div id="category">Category ></div>
+    <div id="category_item">
+        <p>About Us</p>
+        <p>Amazon Promo</p>
+        <p>Behind The Scenes</p>
+        <p>Celebration</p>
+        <p>Education</p>
+        <p>Event</p>
+        <p>Explainer</p>
+        <p>Holiday</p>
+    </div>
+
+    <!--First Section Start-->
+    <section id="sec-2">
+        <div id="side_bar">
+            <p>VIEW BY</p>
+            <div>
+                <div id="side_1El">
+                    <p class="inactive_side">Recommended for you</p>
+                </div>
+                <div id="side_2El" class="side_elements">
+                    <p class="active_side">All Templates</p>
+                </div>
+                <div id="side_3El">
+                    <p class="inactive_side">New</p>
+                </div>
+                <div id="side_4El">
+                    <p class="inactive_side">Popular</p>
+                </div>
+            </div>
+            <div>
+                <h3>TYPE OF TEMPLATE</h3>
+                <p>About Us</p>
+                <p>Amazon Promo</p>
+                <p>Behind The Scenes</p>
+                <p>Celebration</p>
+                <p>Education</p>
+                <p>Event</p>
+                <p>Explainer</p>
+                <p>Holiday</p>
+                <p>List</p>
+                <p>Motivational</p>
+                <p>Narrative</p>
+                <p>Product Promotion</p>
+                <p>Real Estate</p>
+                <p>Service Promotion</p>
+                <p>Slideshow</p>
+                <p>Teaser</p>
+                <p>Testimonial</p>
+                <p>Tutorial</p>
+                <p>Valentine's Day</p>
+                <p>Workplace</p>
+            </div>
+        </div>
+        <div id="templates">
+            <div class="disFlex" id="top_heading">
+                <div class="temp-sec-1-1">
+                    <p>CHOOSE A TEMPLATE</p>
+                    <h1 id="sec_heading">All Templates</h1>
+                    <div id="wave_line">
+                        <span class="wave_line">
+                            <img src="https://d2of6bhnpl91ni.cloudfront.net/bundles/react/images/wavy.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="temp-sec-1-2 disFlex align-center just-center">
+                    START FROM SCRATCH
+                </div>
+            </div>
+            <div class="temp-sec-2 disFlex just-between align-center" id="heading_sec2">
+                <div>
+                    <p>We suggest starting with these templates.</p>
+                </div>
+                <div>
+                    <form>
+                        <input type="search" placeholder="Search all templates" id="query">
+                    </form>
+                </div>
+            </div>
+            <div id="templates_results1"></div>
+        </div>
+    </section>
+    <!--First Section End-->
+</body>
+
+</html>
+<script type="module">
+    import { dataBase1 } from "./components/server.js";
+    import { appendData } from "./components/production.js";
+
+    const main1 = () => {
+        let data = dataBase1();
+        appendData(data, "templates_results1");
+    }
+
+    main1();
+
+    document.getElementById("side_1El").addEventListener("click", () => {
+        window.location.href = "/templates.html";
+    })
+</script>
+<script src="./js/templates.js" type="module"></script>
