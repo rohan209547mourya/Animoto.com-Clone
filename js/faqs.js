@@ -80,11 +80,11 @@ btn1.addEventListener('click', () => {
 function redirect() {
   // console.log("hello");
 
-  // let singinArr = JSON.parse(localStorage.getItem('custmerData')) || [];
+  let singinArr = JSON.parse(localStorage.getItem('custmerData')) || [];
 
   if (singinArr.cEmail == singinObj.cEmail) {
-    window.location.href = 'templates.html';
+    window.location.href = '../html/templates.htmlt';
   } else {
-    window.location.href = 'signup.html';
+    window.location.href = '../html/signup.html';
   }
 }
