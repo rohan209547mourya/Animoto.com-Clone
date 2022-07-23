@@ -8,8 +8,8 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="templates.css">
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/templates.css">
     <title>Recommended Video Templates - Animoto</title>
 </head>
 
@@ -34,11 +34,11 @@
         <div id="side_bar">
             <p>VIEW BY</p>
             <div>
-                <div class="side_elements" id="side_1El">
-                    <p class="active_side">Recommended for you</p>
+                <div id="side_1El">
+                    <p class="inactive_side">Recommended for you</p>
                 </div>
-                <div id="side_2El">
-                    <p class="inactive_side">All Templates</p>
+                <div id="side_2El" class="side_elements">
+                    <p class="active_side">All Templates</p>
                 </div>
                 <div id="side_3El">
                     <p class="inactive_side">New</p>
@@ -75,7 +75,7 @@
             <div class="disFlex" id="top_heading">
                 <div class="temp-sec-1-1">
                     <p>CHOOSE A TEMPLATE</p>
-                    <h1 id="sec_heading">Recommended for you</h1>
+                    <h1 id="sec_heading">All Templates</h1>
                     <div id="wave_line">
                         <span class="wave_line">
                             <img src="https://d2of6bhnpl91ni.cloudfront.net/bundles/react/images/wavy.svg" alt="">
@@ -96,11 +96,26 @@
                     </form>
                 </div>
             </div>
-            <div id="templates_results"></div>
+            <div id="templates_results1"></div>
         </div>
     </section>
     <!--First Section End-->
 </body>
 
 </html>
-<script src="./js/templates.js" type="module"></script>
+<script type="module">
+    import { dataBase1 } from "../components/server.js";
+    import { appendData } from "../components/production.js";
+
+    const main1 = () => {
+        let data = dataBase1();
+        appendData(data, "templates_results1");
+    }
+
+    main1();
+
+    document.getElementById("side_1El").addEventListener("click", () => {
+        window.location.href = "./templates.html";
+    })
+</script>
+<script src="../js/templates.js" type="module"></script>

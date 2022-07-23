@@ -35,5 +35,5 @@ document.getElementById("category").addEventListener("click", () => {
 
 
 document.getElementById("side_2El").addEventListener("click", () => {
-    window.location.href = "/allteamplates.html";
+    window.location.href = "/html/allteamplates.html";
 })
