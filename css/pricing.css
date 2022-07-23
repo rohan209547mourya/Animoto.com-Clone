@@ -96,7 +96,7 @@ body {
 }
 
 .main {
-    background: url(./assests/center-purple.svg) no-repeat;
+    background: url(../asset/center-purple.svg) no-repeat;
     background-size: cover;
     height: 9em;
     display: flex;
@@ -105,14 +105,14 @@ body {
 }
 
 .left {
-    background: url(./assests/red-side.svg) no-repeat;
+    background: url(../asset/red-side.svg) no-repeat;
     height: 9em;
     width: 8em;
     margin-top: 5em;
 }
 
 .right {
-    background: url(./assests/yellow.svg) no-repeat;
+    background: url(../asset/yellow.svg) no-repeat;
     height: 9em;
     width: 4em;
     padding-top: 7em;
