@@ -121,7 +121,7 @@ body {
   width: 110px;
   background-image: url(https://animoto.com/static/wavy-e1cf461e1a9e7fed09a8a00a53c93f7f.svg);
   margin-bottom: 60px;
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .main {
@@ -615,18 +615,65 @@ body {
 
 /* BOTTOM EXPLORE */
 
-.bottom-explore {
-  height: 100px;
+.expo {
+  height: auto;
   width: auto;
-  /* border: 6px solid rgb(6, 110, 93); */
-  padding-top: 40px;
+  /* border: 1px solid red; */
   background-color: aliceblue;
+  margin-top: 40px;
 }
 
-.expolore-text {
-  font-size: 20px;
+.expo-head{
+
+  background-color: aliceblue;
+  padding: 20px 0px;
+
+}
+
+.expo-head p {
   text-align: center;
+  /* border: 1px solid black; */
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 40px;
   cursor: pointer;
+}
+
+.links-container {
+  height: auto;
+  width: 100%;
+  /* border: 2px solid blue; */
+  display: flex;
+  gap: 10px;
+}
+
+.show {
+  height: auto;
+  width: 35%;
+  /* border: 1px solid green; */
+}
+
+.work,
+li {
+  text-align: center;
+  font-size: 20px;
+}
+li {
+  line-height: 3;
+  list-style: none;
+}
+li a {
+  text-decoration: underline;
+  color: blue;
+}
+
+li a:hover{
+
+  color: black;
+}
+
+.hide {
+  display: none;
 }
 
 /* ****************************** */
