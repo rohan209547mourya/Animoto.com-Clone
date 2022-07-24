@@ -1,0 +1,141 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+  <title>Sign Up - Animoto</title>
+  <style>
+    #signup {
+      width: 500px;
+      height: 600px;
+      text-align: center;
+
+      background-image: url(https://media3.giphy.com/media/xTiTniuHdUjpOlNo1q/giphy.gif);
+      margin: 25px 25px;
+      margin-left: 500px;
+    }
+
+    #signup>h1 {
+      color: #23408c;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin-top: 50px;
+      padding-top: 50px;
+    }
+
+    #signup>h3 {
+      color: blueviolet;
+    }
+
+    input {
+      width: 80%;
+      height: 40px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(226, 225, 223);
+      margin-right: 50px;
+      font-size: 30px;
+    }
+
+    button {
+      width: 300px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50px;
+      border: transparent;
+
+    }
+
+    img {
+      width: 60px;
+      height: 40px;
+      border-radius: 50px;
+      margin-top: 4px;
+    }
+
+    #button {
+      display: flex;
+      cursor: pointer;
+    }
+
+    #creat {
+      width: 300px;
+      height: 50px;
+      font-style: italic;
+      background-color: rgb(122, 166, 166);
+      cursor: pointer;
+    }
+
+    .or {
+      color: rgba(201, 186, 201, 0.973);
+    }
+
+    h6,
+    h5 {
+      color: rgb(189, 210, 210);
+      margin-top: 10px;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="./index.css"> -->
+</head>
+
+<body>
+  <div id="signup">
+    <h1>Create a free account</h1>
+    <h3>Make and share unlimited videos for free</h3>
+    <form>
+      <input type="email" id="email" placeholder="Email" />
+
+      <input type="password" id="password" placeholder="Password" />
+      <button id="creat">CREATE AN ACCOUNT</button>
+      <h4 class="or">~~~~~~~~~~~~~~~~~~~~ Or ~~~~~~~~~~~~~~~~~~~~</h4>
+
+      <button>
+        <div id="button">
+          <img
+            src="data:image/png;base64,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"
+            alt="" />
+          <h3>SIGN UP WITH FACEBOOK</h3>
+        </div>
+      </button>
+      <h6>By signing up agree to our <a href="https://animoto.com/legal/terms">terms of service</a> and <span
+          class="spanterm">privacy policy.</span></h6>
+      <h5>Already have an account ? <a href="./login.html">Log in</a></h5>
+    </form>
+  </div>
+</body>
+
+</html>
+<script>
+  document.querySelector("#creat").addEventListener("click", myproductApp);
+  let customerArr = JSON.parse(localStorage.getItem("customerData")) || []
+  function myproductApp() {
+    event.preventDefault();
+    let customerObj = {
+      cEmail: document.querySelector("#email").value,
+      cPassword: document.querySelector("#password").value,
+
+    };
+
+    let flag = true;
+    for (let i = 0; i < customerArr.length; i++) {
+      if (customerArr[i].cEmail == customerObj.cEmail) {
+        flag = false;
+      }
+    }
+    if (flag) {
+      customerArr.push(customerObj);
+      localStorage.setItem("customerData", JSON.stringify(customerArr));
+
+    }
+    else {
+      alert("Email is alrady pragent singIn");
+
+    }
+
+    window.location.href = "./login.html";
+  }
+
+</script>

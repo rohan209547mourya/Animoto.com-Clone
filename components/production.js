@@ -39,8 +39,8 @@ const navbar = () => {
             <li> <a href="./Photography.html"> PHOTOGRAPHY</a></li>
             <li> <a href="#"> FAMILY</a></li>
             <li> <a href="./pricing.html"> PRICING</a></li>
-            <li> <a href="#"> SIGN UP</a></li>
-            <li> <a href="#"> LOG IN</a></li>
+            <li> <a href="../html/signup.html"> SIGN UP</a></li>
+            <li> <a href="../html/login.html"> LOG IN</a></li>
         </ul>
     </div>
 
