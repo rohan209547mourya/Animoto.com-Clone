@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body{
+            background-image: url(https://365psd.com/images/previews/e8e/abstract-colorful-3d-cubes-vector-background-free-34088.jpg);
+        }
+        h2{
+            text-align: center;
+            margin-top: 30px 0px 50px;
+            margin-bottom: -20px;
+            
+        }
+        #login{
+        background-color: white;
+        width: 80%;
+        height: 600px;
+        text-align: center;
+        margin:0px 50px;
+        margin-left: 150px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        h1{
+            color: #23408c;
+            padding-top: 20px;
+            margin-bottom: -10px;
+            font-size: 60px;   
+        }
+      #login>p{
+        font-size: 18px;
+      }
+        input {
+        width: 80%;
+        height: 60px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border:1px solid;
+        background-color:white
+      }
+      button {
+        width: 300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        border:1px solid black;
+        
+      }
+      img {
+        width: 60px;
+        height: 40px;
+        border-radius: 50px;
+        margin-top: 4px;
+      }
+      #button {
+        display: flex;
+        cursor: pointer;
+      }
+      #create {
+        width: 300px;
+        height: 50px;
+        background-color:#23408c;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+      }
+      .or{
+        color:rgba(201, 186, 201, 0.973);
+      }
+      h5{
+        color: rgb(16, 21, 21);
+        margin-top: 20px;
+      }
+      p{
+        font-size: smaller;
+        color: gray;
+        padding-top: 10px;
+      }
+      .spanterm{
+       text-decoration: underline rgb(221, 233, 232) dashed;
+      }
+      #term{
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+    <h2>New to Animoto? <a href="../signup/signup.html">Sign up free</a></h2>
+    
+    <div id="login">
+   <h1>WELCOME BACK</h1>
+   <p>Log in to create your next video.</p>
+   <form>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="create">LOG IN WITH EMAIL</button>
+    <h4 class="or">------------------------------------------------------------Or------------------------------------------------------------</h4>
+    <button>
+        <div id="button">
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <h3>LOGIN WITH FACEBOOK</h3>
+        </div>
+      </button>
+      <button>
+        <div id="button">
+          <img
+            src="https://quartzprogram.com/secured/Images/SSO/logo_google.png" alt=""
+          />
+          <h3>LOGIN WITH GOOGLE</h3>
+        </div>
+      </button>
+      <button>
+        <div id="button">
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+          <h3>LOGIN WITH APPLE</h3>
+        </div>
+      </button>
+      <p>By logging in you agree to our <a href="https://animoto.com/legal/terms">terms of service</a> and <span class="spanterm"> privacy policy.</span></p>
+</div>
+</body>
+</html>
+<script>
+  document.querySelector("#create").addEventListener("click",customerDApp);
+let singinArr=JSON.parse(localStorage.getItem("customerData"))||[]
+
+function customerDApp(){
+event.preventDefault();
+let singinObj={
+
+ cEmail:document.querySelector("#email").value,
+ cPassword:document.querySelector("#password").value,
+ 
+};
+
+
+let flag=false;
+
+for(let i=0;i<singinArr.length;i++){
+   if(singinArr[i].cEmail==singinObj.cEmail&&singinArr[i].cPassword==singinObj.cPassword){
+      flag=true;
+   }
+   
+}
+if(flag){
+  alert("LogIn sucssefully");
+ localStorage.setItem("system","online"); 
+ window.location.href="../index.html";
+}
+else{
+   alert("LogIn failed");
+   window.location.href="../signup/signup.html";
+
+}
+
+
+}
+
+</script>
