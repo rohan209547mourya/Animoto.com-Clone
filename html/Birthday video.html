@@ -451,3 +451,18 @@
 
 </html>
 <script src="../js/Birthday video.js"></script>
+
+
+<script>
+  let temp = localStorage.getItem("system");
+
+  if (temp !== undefined) {
+    console.log("helloe");
+    document.getElementById("BARoption2").innerHTML = "";
+    let a = document.createElement("a");
+    let h2 = document.createElement("h2");
+    h2.innerText = "LOG OUT";
+    a.append(h2);
+    document.getElementById("BARoption2").append(a);
+  }
+</script>
