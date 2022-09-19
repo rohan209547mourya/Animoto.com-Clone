@@ -20,3 +20,6 @@ we have also used some local Data base to collect the data from main website.
 this was a clone of a # Web Video Editing Application ( www.animoto.com ). this company basically present you some basic templates
 on there static website and you can edit those templates in there Web based editor.
 
+
+
+![Pic](asset/Pic1.png)
