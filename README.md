@@ -21,5 +21,8 @@ this was a clone of a # Web Video Editing Application ( www.animoto.com ). this 
 on there static website and you can edit those templates in there Web based editor.
 
 
+#Inside Look
 
 ![Pic](asset/Pic1.png)
+![Pic](asset/Pic2.png)
+![Pic](asset/Pic3.png)
