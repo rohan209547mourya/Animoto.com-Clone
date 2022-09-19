@@ -20,11 +20,3 @@ we have also used some local Data base to collect the data from main website.
 this was a clone of a # Web Video Editing Application ( www.animoto.com ). this company basically present you some basic templates
 on there static website and you can edit those templates in there Web based editor.
 
-
-# Inside Look
-
-![Picture] (/asset/Pic1.png)
-![Picture] (https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic2.png)
-![Picture] (https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic3.png)
-
-<img href="https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic1.png" />
