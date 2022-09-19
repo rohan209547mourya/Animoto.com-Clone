@@ -23,4 +23,6 @@ on there static website and you can edit those templates in there Web based edit
 
 # Inside Look
 
-
+![Picture] (https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic1.png)
+![Picture] (https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic2.png)
+![Picture] (https://github.com/rohan209547mourya/deeply-tub-2367/blob/main/asset/Pic3.png)
