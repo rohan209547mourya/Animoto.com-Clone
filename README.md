@@ -22,7 +22,7 @@ on there static website and you can edit those templates in there Web based edit
 
 
 #Inside Look
-<img src="http://localhost:3001/static/media/animotoClone.00fd7884adbb39bfda54.gif" alt="Animoto clone">
+<img src="https://abhishek07788.github.io/static/media/animotoClone.00fd7884adbb39bfda54.gif" alt="Animoto.com"/>
 ![Pic](asset/Pic1.png)
 ![Pic](asset/Pic2.png)
 ![Pic](asset/Pic3.png)
